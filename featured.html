@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nổi Bật - FreeLancerConnect</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-handshake me-2"></i>FreeLancerConnect
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="community.html">Cộng Đồng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="featured.html">Nổi Bật</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="login.html" class="btn btn-outline-primary me-2"
+              >Đăng nhập</a
+            >
+            <a href="register.html" class="btn btn-primary">Đăng ký</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">Freelancer & Dự án nổi bật</h1>
+            <p class="lead mb-4">
+              Khám phá những freelancer tài năng nhất và các dự án thành công
+              được cộng đồng đánh giá cao.
+            </p>
+            <a href="#featured-freelancers" class="btn btn-light btn-lg me-3"
+              >Xem Freelancer</a
+            >
+            <a href="#featured-projects" class="btn btn-outline-light btn-lg"
+              >Xem Dự án</a
+            >
+          </div>
+          <div class="col-lg-6 text-center">
+            <img
+              src="https://via.placeholder.com/500x400/007bff/ffffff?text=Featured"
+              alt="Featured"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h5 class="mb-0">Lọc theo danh mục</h5>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-md-end">
+              <select class="form-select me-3" style="width: auto">
+                <option selected>Tất cả danh mục</option>
+                <option value="web">Lập trình Web</option>
+                <option value="mobile">Phát triển Mobile</option>
+                <option value="design">Thiết kế đồ họa</option>
+                <option value="marketing">Marketing Digital</option>
+              </select>
+              <select class="form-select" style="width: auto">
+                <option selected>Sắp xếp</option>
+                <option value="rating">Đánh giá cao nhất</option>
+                <option value="projects">Nhiều dự án nhất</option>
+                <option value="recent">Gần đây nhất</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Freelancers -->
+    <section id="featured-freelancers" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Freelancer nổi bật</h2>
+          <p class="lead text-muted">
+            Những freelancer được đánh giá cao nhất bởi cộng đồng
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/007bff/ffffff?text=NVA"
+                  alt="Nguyễn Văn An"
+                  class="profile-img mb-3"
+                />
+                <h5>Nguyễn Văn An</h5>
+                <p class="text-muted mb-3">Senior Full-stack Developer</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.9/5 - 156 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">MongoDB</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>89</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$45/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Chuyên phát triển ứng dụng web với React và Node.js. Có kinh
+                  nghiệm 5+ năm làm việc với các startup và doanh nghiệp.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/28a745/ffffff?text=TTB"
+                  alt="Trần Thị Bình"
+                  class="profile-img mb-3"
+                />
+                <h5>Trần Thị Bình</h5>
+                <p class="text-muted mb-3">UI/UX Designer</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.8/5 - 203 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">Figma</span>
+                  <span class="skill-tag">Adobe XD</span>
+                  <span class="skill-tag">Sketch</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>127</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$35/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Thiết kế giao diện user-friendly và responsive cho web và
+                  mobile app. Chuyên về research và user experience.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/dc3545/ffffff?text=LMC"
+                  alt="Lê Minh Châu"
+                  class="profile-img mb-3"
+                />
+                <h5>Lê Minh Châu</h5>
+                <p class="text-muted mb-3">Digital Marketing Specialist</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.9/5 - 178 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">SEO</span>
+                  <span class="skill-tag">Google Ads</span>
+                  <span class="skill-tag">Facebook Ads</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>95</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$30/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Chuyên gia marketing online với kinh nghiệm tăng trưởng doanh
+                  số cho các doanh nghiệp vừa và nhỏ.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/ffc107/ffffff?text=PVD"
+                  alt="Phạm Văn Đức"
+                  class="profile-img mb-3"
+                />
+                <h5>Phạm Văn Đức</h5>
+                <p class="text-muted mb-3">Mobile App Developer</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.7/5 - 134 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">React Native</span>
+                  <span class="skill-tag">Flutter</span>
+                  <span class="skill-tag">iOS</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>73</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$40/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Phát triển ứng dụng mobile cross-platform với React Native và
+                  Flutter. Có kinh nghiệm deploy lên App Store và Play Store.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/17a2b8/ffffff?text=NTH"
+                  alt="Nguyễn Thu Hương"
+                  class="profile-img mb-3"
+                />
+                <h5>Nguyễn Thu Hương</h5>
+                <p class="text-muted mb-3">Content Writer & SEO</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.8/5 - 189 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">Content Writing</span>
+                  <span class="skill-tag">SEO</span>
+                  <span class="skill-tag">Copywriting</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>156</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$25/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Chuyên viết content marketing, blog posts và SEO content. Có
+                  kinh nghiệm làm việc với nhiều ngành khác nhau.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card profile-card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="https://via.placeholder.com/120x120/6f42c1/ffffff?text=VMT"
+                  alt="Võ Minh Tâm"
+                  class="profile-img mb-3"
+                />
+                <h5>Võ Minh Tâm</h5>
+                <p class="text-muted mb-3">Data Analyst & Scientist</p>
+                <div class="rating mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="ms-2 text-muted">(4.9/5 - 112 đánh giá)</span>
+                </div>
+                <div class="mb-3">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Machine Learning</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span><strong>67</strong> dự án hoàn thành</span>
+                  <span class="text-success fw-bold">$50/giờ</span>
+                </div>
+                <p class="text-muted small mb-3">
+                  Chuyên phân tích dữ liệu và xây dựng mô hình Machine Learning.
+                  Có kinh nghiệm với big data và business intelligence.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary">Xem hồ sơ</button>
+                  <button class="btn btn-outline-primary">Liên hệ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-outline-primary btn-lg"
+            >Xem thêm Freelancer</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="featured-projects" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Dự án nổi bật</h2>
+          <p class="lead text-muted">
+            Những dự án thành công được cộng đồng đánh giá cao
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="https://via.placeholder.com/60x60/007bff/ffffff?text=E1"
+                    alt="E-commerce"
+                    class="rounded me-3"
+                  />
+                  <div>
+                    <h5 class="mb-0">Website E-commerce hoàn chỉnh</h5>
+                    <small class="text-muted">Hoàn thành 2 tuần trước</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-3">
+                  Xây dựng website bán hàng online với đầy đủ tính năng: quản lý
+                  sản phẩm, giỏ hàng, thanh toán, quản lý đơn hàng. Sử dụng
+                  React, Node.js và MongoDB.
+                </p>
+                <div class="mb-3">
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">Stripe</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <strong class="text-success">$2,500</strong>
+                    <span class="text-muted ms-2">Ngân sách</span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="ms-1">5.0</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://via.placeholder.com/30x30/28a745/ffffff?text=F"
+                      alt="Freelancer"
+                      class="rounded-circle me-2"
+                    />
+                    <span class="small">Bởi Nguyễn Văn An</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="https://via.placeholder.com/60x60/28a745/ffffff?text=A1"
+                    alt="Mobile App"
+                    class="rounded me-3"
+                  />
+                  <div>
+                    <h5 class="mb-0">Ứng dụng Mobile Fitness</h5>
+                    <small class="text-muted">Hoàn thành 1 tuần trước</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-3">
+                  Ứng dụng tập luyện thể dục với các tính năng: theo dõi bài
+                  tập, lịch tập, thống kê tiến độ. Thiết kế UI/UX hiện đại và
+                  user-friendly.
+                </p>
+                <div class="mb-3">
+                  <span class="skill-tag">React Native</span>
+                  <span class="skill-tag">Redux</span>
+                  <span class="skill-tag">Firebase</span>
+                  <span class="skill-tag">UI/UX</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <strong class="text-success">$1,800</strong>
+                    <span class="text-muted ms-2">Ngân sách</span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="ms-1">4.9</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://via.placeholder.com/30x30/dc3545/ffffff?text=F"
+                      alt="Freelancer"
+                      class="rounded-circle me-2"
+                    />
+                    <span class="small">Bởi Phạm Văn Đức</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="https://via.placeholder.com/60x60/dc3545/ffffff?text=B1"
+                    alt="Brand Design"
+                    class="rounded me-3"
+                  />
+                  <div>
+                    <h5 class="mb-0">Thiết kế nhận diện thương hiệu</h5>
+                    <small class="text-muted">Hoàn thành 3 ngày trước</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-3">
+                  Thiết kế logo, brandbook và hệ thống nhận diện thương hiệu
+                  hoàn chỉnh cho startup công nghệ. Bao gồm business card,
+                  letterhead, presentation template.
+                </p>
+                <div class="mb-3">
+                  <span class="skill-tag">Brand Design</span>
+                  <span class="skill-tag">Logo Design</span>
+                  <span class="skill-tag">Illustrator</span>
+                  <span class="skill-tag">Photoshop</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <strong class="text-success">$800</strong>
+                    <span class="text-muted ms-2">Ngân sách</span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="ms-1">4.8</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://via.placeholder.com/30x30/ffc107/ffffff?text=F"
+                      alt="Freelancer"
+                      class="rounded-circle me-2"
+                    />
+                    <span class="small">Bởi Trần Thị Bình</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="https://via.placeholder.com/60x60/ffc107/ffffff?text=M1"
+                    alt="Marketing Campaign"
+                    class="rounded me-3"
+                  />
+                  <div>
+                    <h5 class="mb-0">Chiến dịch Digital Marketing</h5>
+                    <small class="text-muted">Hoàn thành 5 ngày trước</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-3">
+                  Thiết kế và triển khai chiến dịch marketing online cho sản
+                  phẩm mới. Bao gồm SEO, Google Ads, Facebook Ads và content
+                  marketing trong 3 tháng.
+                </p>
+                <div class="mb-3">
+                  <span class="skill-tag">Google Ads</span>
+                  <span class="skill-tag">Facebook Ads</span>
+                  <span class="skill-tag">SEO</span>
+                  <span class="skill-tag">Content Marketing</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <strong class="text-success">$3,200</strong>
+                    <span class="text-muted ms-2">Ngân sách</span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="ms-1">5.0</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://via.placeholder.com/30x30/17a2b8/ffffff?text=F"
+                      alt="Freelancer"
+                      class="rounded-circle me-2"
+                    />
+                    <span class="small">Bởi Lê Minh Châu</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-outline-primary btn-lg">Xem thêm Dự án</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Câu chuyện thành công</h2>
+          <p class="lead text-muted">
+            Những thành tựu đáng tự hào của cộng đồng FreeLancerConnect
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 text-center">
+                <div class="mb-4">
+                  <img
+                    src="https://via.placeholder.com/80x80/007bff/ffffff?text=S1"
+                    alt="Success Story"
+                    class="rounded-circle mb-3"
+                  />
+                  <h5>Từ học sinh đến Full-stack Developer</h5>
+                </div>
+                <p class="text-muted mb-4">
+                  "Sau khi tốt nghiệp đại học, tôi bắt đầu làm freelance trên
+                  FreeLancerConnect. Từ những dự án nhỏ, giờ tôi đã có thu nhập
+                  ổn định $3000/tháng."
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <img
+                    src="https://via.placeholder.com/40x40/28a745/ffffff?text=A"
+                    alt="Author"
+                    class="rounded-circle me-2"
+                  />
+                  <div class="text-start">
+                    <h6 class="mb-0">Hoàng Minh Tuấn</h6>
+                    <small class="text-muted">Full-stack Developer</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 text-center">
+                <div class="mb-4">
+                  <img
+                    src="https://via.placeholder.com/80x80/28a745/ffffff?text=S2"
+                    alt="Success Story"
+                    class="rounded-circle mb-3"
+                  />
+                  <h5>Mở rộng kinh doanh với đội ngũ freelance</h5>
+                </div>
+                <p class="text-muted mb-4">
+                  "FreeLancerConnect giúp chúng tôi tìm được những freelancer
+                  chất lượng để mở rộng dự án. Tiết kiệm chi phí nhưng vẫn đảm
+                  bảo chất lượng."
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <img
+                    src="https://via.placeholder.com/40x40/dc3545/ffffff?text=B"
+                    alt="Author"
+                    class="rounded-circle me-2"
+                  />
+                  <div class="text-start">
+                    <h6 class="mb-0">Lê Thị Mai</h6>
+                    <small class="text-muted">CEO Startup</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 text-center">
+                <div class="mb-4">
+                  <img
+                    src="https://via.placeholder.com/80x80/ffc107/ffffff?text=S3"
+                    alt="Success Story"
+                    class="rounded-circle mb-3"
+                  />
+                  <h5>Chuyển đổi nghề nghiệp thành công</h5>
+                </div>
+                <p class="text-muted mb-4">
+                  "Từ một nhân viên văn phòng, tôi đã chuyển sang làm freelance
+                  marketing. Nhờ FreeLancerConnect, tôi có được sự nghiệp mới và
+                  thu nhập tốt hơn."
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <img
+                    src="https://via.placeholder.com/40x40/17a2b8/ffffff?text=C"
+                    alt="Author"
+                    class="rounded-circle me-2"
+                  />
+                  <div class="text-start">
+                    <h6 class="mb-0">Phạm Đức Long</h6>
+                    <small class="text-muted">Marketing Specialist</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">
+          Bạn cũng có thể trở thành Freelancer nổi bật!
+        </h2>
+        <p class="lead mb-4">
+          Tham gia cộng đồng và xây dựng sự nghiệp freelance của bạn ngay hôm
+          nay
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <a href="register.html" class="btn btn-light btn-lg w-100">
+                  <i class="fas fa-user-plus me-2"></i>Đăng ký miễn phí
+                </a>
+              </div>
+              <div class="col-md-6 mb-3">
+                <a href="about.html" class="btn btn-outline-light btn-lg w-100">
+                  <i class="fas fa-info-circle me-2"></i>Tìm hiểu thêm
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5><i class="fas fa-handshake me-2"></i>FreeLancerConnect</h5>
+            <p class="text-muted">
+              Nền tảng kết nối freelancer và khách hàng hàng đầu Việt Nam. Chúng
+              tôi cam kết mang đến trải nghiệm tốt nhất cho cộng đồng.
+            </p>
+            <div class="social-links">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Liên kết</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li><a href="community.html">Cộng đồng</a></li>
+              <li><a href="featured.html">Nổi bật</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Dành cho Freelancer</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Tìm việc</a></li>
+              <li><a href="#">Tạo hồ sơ</a></li>
+              <li><a href="#">Kỹ năng</a></li>
+              <li><a href="#">Hướng dẫn</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Dành cho Khách hàng</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Đăng dự án</a></li>
+              <li><a href="#">Tìm freelancer</a></li>
+              <li><a href="#">Quản lý dự án</a></li>
+              <li><a href="#">Hỗ trợ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Hỗ trợ</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Trung tâm hỗ trợ</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Báo cáo</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2024 FreeLancerConnect. Tất cả quyền được bảo lưu.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="me-3">Điều khoản sử dụng</a>
+            <a href="#">Chính sách bảo mật</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
