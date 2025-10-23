@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Dự Án - FreelancerConnect 5Stars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .budget-group {
+            display: flex;
+            gap: 15px;
+        }
+        .budget-group .form-group {
+            flex: 1;
+        }
+        .skills-input {
+            display: flex;
+            gap: 10px;
+        }
+        .skills-input input {
+            flex: 1;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .preview-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🌟 Đăng Dự Án Mới</h1>
+        <form id="projectForm">
+            <div class="form-group">
+                <label for="projectTitle">Tiêu đề dự án <span class="required">*</span></label>
+                <input type="text" id="projectTitle" name="projectTitle" required 
+                       placeholder="Ví dụ: Thiết kế website bán hàng online">
+            </div>
+
+            <div class="form-group">
+                <label for="projectCategory">Danh mục <span class="required">*</span></label>
+                <select id="projectCategory" name="projectCategory" required>
+                    <option value="">Chọn danh mục</option>
+                    <option value="web-development">Phát triển Web</option>
+                    <option value="mobile-app">Ứng dụng Mobile</option>
+                    <option value="design">Thiết kế</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="writing">Viết nội dung</option>
+                    <option value="data-analysis">Phân tích dữ liệu</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="projectDescription">Mô tả chi tiết <span class="required">*</span></label>
+                <textarea id="projectDescription" name="projectDescription" required
+                          placeholder="Mô tả chi tiết về yêu cầu, chức năng, và kỳ vọng của dự án..."></textarea>
+            </div>
+
+            <div class="budget-group">
+                <div class="form-group">
+                    <label for="budgetMin">Ngân sách tối thiểu (VNĐ) <span class="required">*</span></label>
+                    <input type="number" id="budgetMin" name="budgetMin" required min="100000"
+                           placeholder="1000000">
+                </div>
+                <div class="form-group">
+                    <label for="budgetMax">Ngân sách tối đa (VNĐ) <span class="required">*</span></label>
+                    <input type="number" id="budgetMax" name="budgetMax" required min="100000"
+                           placeholder="5000000">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Thời gian dự kiến (ngày) <span class="required">*</span></label>
+                <input type="number" id="duration" name="duration" required min="1" max="365"
+                       placeholder="30">
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Kỹ năng yêu cầu</label>
+                <div class="skills-input">
+                    <input type="text" id="skills" name="skills" 
+                           placeholder="React, Node.js, MySQL, Photoshop... (cách nhau bằng dấu phẩy)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="experienceLevel">Trình độ freelancer</label>
+                <select id="experienceLevel" name="experienceLevel">
+                    <option value="any">Tất cả trình độ</option>
+                    <option value="beginner">Người mới bắt đầu</option>
+                    <option value="intermediate">Trung bình</option>
+                    <option value="expert">Chuyên gia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="attachments">Tài liệu đính kèm</label>
+                <input type="file" id="attachments" name="attachments" multiple
+                       accept=".pdf,.doc,.docx,.jpg,.png,.zip">
+                <small style="color: #666;">Có thể đính kèm nhiều file (PDF, Word, hình ảnh, ZIP)</small>
+            </div>
+
+            <button type="submit" class="btn">🚀 Đăng Dự Án</button>
+        </form>
+
+        <div class="preview-section" id="previewSection" style="display: none;">
+            <h3>👀 Xem trước dự án</h3>
+            <div id="projectPreview"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('input', updatePreview);
+        
+        function updatePreview() {
+            const title = document.getElementById('projectTitle').value;
+            const category = document.getElementById('projectCategory').value;
+            const description = document.getElementById('projectDescription').value;
+            const budgetMin = document.getElementById('budgetMin').value;
+            const budgetMax = document.getElementById('budgetMax').value;
+            const duration = document.getElementById('duration').value;
+            const skills = document.getElementById('skills').value;
+            
+            if (title || description) {
+                document.getElementById('previewSection').style.display = 'block';
+                document.getElementById('projectPreview').innerHTML = `
+                    <h4>${title || 'Tiêu đề dự án'}</h4>
+                    <p><strong>Danh mục:</strong> ${category || 'Chưa chọn'}</p>
+                    <p><strong>Mô tả:</strong> ${description || 'Chưa có mô tả'}</p>
+                    <p><strong>Ngân sách:</strong> ${budgetMin ? formatCurrency(budgetMin) : '0'} - ${budgetMax ? formatCurrency(budgetMax) : '0'} VNĐ</p>
+                    <p><strong>Thời gian:</strong> ${duration || '0'} ngày</p>
+                    <p><strong>Kỹ năng:</strong> ${skills || 'Không yêu cầu cụ thể'}</p>
+                `;
+            } else {
+                document.getElementById('previewSection').style.display = 'none';
+            }
+        }
+        
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('vi-VN').format(amount);
+        }
+        
+        document.getElementById('projectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('🎉 Dự án đã được đăng thành công! Bạn sẽ nhận được thông báo khi có freelancer quan tâm.');
+        });
+    </script>
+</body>
+</html>
