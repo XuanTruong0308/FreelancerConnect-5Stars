@@ -220,8 +220,8 @@ Chỉnh sửa CSS variables trong `css/style.css`:
 
 Nếu có câu hỏi hoặc cần hỗ trợ:
 
-- Email: support@freelancerconnect.vn
-- Phone: +84 (028) 123 4567
+- Email: boiznews.fpoly@gmail.com
+- Phone: +84 (039) 9760 075
 
 ## 📄 License
 
